@@ -75,10 +75,24 @@
 
             </StackPanel>
 
-            <Image x:Name="imageControl" 
-                   Grid.Column="1" 
-                   Grid.RowSpan="2" 
-                   Stretch="Uniform" />
+            
+            <Canvas x:Name="canvas" 
+                    Grid.Column="1" 
+                    Grid.RowSpan="2"
+                    Background="Transparent"
+                   >
+                <Image x:Name="imageControl" 
+                        Grid.Column="1" 
+                        Grid.RowSpan="2" 
+                        Stretch="None"
+                        Cursor="Cross"
+                        MouseDown="canvas_MouseDown"
+                        MouseMove="canvas_MouseMove"
+                        MouseUp="canvas_MouseUp"/>
+              
+            </Canvas>
+            <!-- ... existing XAML code ... -->
+           
 
         </Grid>
 
